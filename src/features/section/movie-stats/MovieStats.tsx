@@ -1,6 +1,10 @@
 import React from "react";
-import { Flex, NumberFormatter, Text } from "@mantine/core";
-import { SimpleGrid } from "@mantine/core";
+import Image from "next/image";
+import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
+import Awards from "@/public/awards.png";
+import Write from "@/shared/ui/icons/write.svg";
+import Share from "@/shared/ui/icons/share.svg";
+import Link from "next/link";
 
 interface statsType {
   label: string;
@@ -23,41 +27,67 @@ const stats: statsType[] = [
 
 export const MovieStats = () => {
   return (
-    <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl" mt={10}>
-      {stats.map((item) => {
-        if (item.label === "Бюджет" || item.label === "Сборы") {
-          return (
-            <Flex direction="column" gap={0} key={item.id}>
-              <NumberFormatter
-                prefix="$"
-                value={item.value}
-                thousandSeparator
-                className="font-bold"
-              />
-              <Text c="dimmed">{item.label}</Text>
-            </Flex>
-          );
-        } else if (item.label === "Возраст") {
-          return (
-            <Flex direction="column" gap={0} key={item.id}>
-              <NumberFormatter
-                prefix="$"
-                value={item.value}
-                thousandSeparator
-                className="font-bold"
-              />
-              <Text c="dimmed">{item.value}</Text>
-            </Flex>
-          );
-        } else {
-          return (
-            <Flex direction="column" gap={0} key={item.id}>
-              <Text className="font-bold">{item.value}</Text>
-              <Text c="dimmed">{item.label}</Text>
-            </Flex>
-          );
-        }
-      })}
-    </SimpleGrid>
+    <Flex direction="column" gap="md">
+      <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl" mt={10}>
+        {stats.map((item) => {
+          if (item.label === "Бюджет" || item.label === "Сборы") {
+            return (
+              <Flex direction="column" gap={0} key={item.id}>
+                <NumberFormatter
+                  prefix="$"
+                  value={item.value}
+                  thousandSeparator
+                  className="text-xl font-bold"
+                />
+                <Text c="dimmed">{item.label}</Text>
+              </Flex>
+            );
+          } else if (item.label === "Возраст") {
+            return (
+              <Flex direction="column" gap={0} key={item.id}>
+                <NumberFormatter
+                  suffix="+"
+                  value={item.value}
+                  thousandSeparator
+                  className="text-xl font-bold"
+                />
+                <Text c="dimmed">{item.label}</Text>
+              </Flex>
+            );
+          } else {
+            return (
+              <Flex direction="column" gap={0} key={item.id}>
+                <Text fw={700} size="xl">
+                  {item.value}
+                </Text>
+                <Text c="dimmed">{item.label}</Text>
+              </Flex>
+            );
+          }
+        })}
+      </SimpleGrid>
+      <Image src={Awards} alt="awards" />
+
+      <Link href="#">
+        <Flex align="center" gap="xs">
+          <Image src={Write} alt="write a review" />
+          <Text td="underline" fw={700}>
+            Написать рецензию
+          </Text>
+        </Flex>
+      </Link>
+
+      <Link href="#">
+        <Flex align="center" gap="xs">
+          <Image src={Share} alt="" />
+          <Text td="underline" fw={700}>
+            Поделиться
+          </Text>
+        </Flex>
+      </Link>
+      <Link href="#">
+        <Text c="dimmed">Нашли ошибку?</Text>
+      </Link>
+    </Flex>
   );
 };

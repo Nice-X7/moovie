@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/shared/ui/button/button";
 import { Flex, Text } from "@mantine/core";
-import Vector from "./ui/Vector.svg";
-import Favorite from "./ui/favorite.svg";
+import Vector from "@/shared/ui/icons/Vector.svg";
+import Favorite from "@/shared/ui/icons/favorite.svg";
 import { MovieStats } from "@/features/section/movie-stats/MovieStats";
 
 export const MovieActions = () => {

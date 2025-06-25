@@ -1,8 +1,8 @@
 import { Button } from "@/shared/ui/button/button";
 import Image from "next/image";
 import React from "react";
-import TrillerImage from "@/widgets/section/ui/image.png";
-import Vector from "@/widgets/section/ui/Vector.svg";
+import TrillerImage from "@/public/triller.png";
+import Vector from "@/shared/ui/icons/play.svg";
 import { Flex, Text } from "@mantine/core";
 
 export const Triller = () => {

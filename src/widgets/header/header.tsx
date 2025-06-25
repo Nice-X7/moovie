@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ActionIcon, Flex, Input, Text, Title, Tooltip } from "@mantine/core";
 import { IconLanguage } from "@tabler/icons-react";
 import Image from "next/image";
-import iconAccount from "./ui/IconAccount.svg";
-import magnifyingGlass from "./ui/magnifyingGlass.svg";
+import iconAccount from "@/shared/ui/icons/IconAccount.svg";
+import magnifyingGlass from "@/shared/ui/icons/magnifyingGlass.svg";
 import { Navigation } from "./navigation";
 
 export const Header = () => {
