@@ -2,7 +2,7 @@ import { Button } from "@/shared/ui/button/button";
 import Image from "next/image";
 import React from "react";
 import TrillerImage from "@/public/triller.png";
-import Vector from "@/shared/ui/icons/play.svg";
+import Play from "@/shared/icons/play.svg";
 import { Flex, Text } from "@mantine/core";
 
 export const Triller = () => {
@@ -13,7 +13,7 @@ export const Triller = () => {
         <div className="mb-[30px]">
           <Button
             bgColor="#303030"
-            icon={<Image src={Vector} alt="play" width={10} height={20} />}
+            icon={<Image src={Play} alt="play" width={10} height={20} />}
           />
         </div>
       </div>

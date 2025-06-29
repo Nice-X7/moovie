@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
 import Awards from "@/public/awards.png";
-import Write from "@/shared/ui/icons/write.svg";
-import Share from "@/shared/ui/icons/share.svg";
+import Write from "@/shared/icons/write.svg";
+import Share from "@/shared/icons/share.svg";
 import Link from "next/link";
 
 interface statsType {
@@ -86,7 +86,7 @@ export const MovieStats = () => {
         </Flex>
       </Link>
       <Link href="#">
-        <Text c="dimmed">Нашли ошибку?</Text>
+        <Text c="dimmed" fz="14">Нашли ошибку?</Text>
       </Link>
     </Flex>
   );

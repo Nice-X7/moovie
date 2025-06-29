@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.titled-section {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 2.25rem;
+    background-color: #6A4F40;
+    border-radius: 9999px;
+  }
+}
+.mantine-ScrollArea-thumb {
+  background: #E2D4BB !important;
+}
+
+.mantine-ScrollArea-thumb:hover {
+  background: #D0C4A8 !important;
+}

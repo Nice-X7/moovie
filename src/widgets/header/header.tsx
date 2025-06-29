@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ActionIcon, Flex, Input, Text, Title, Tooltip } from "@mantine/core";
 import { IconLanguage } from "@tabler/icons-react";
-import Image from "next/image";
-import iconAccount from "@/shared/ui/icons/IconAccount.svg";
-import magnifyingGlass from "@/shared/ui/icons/magnifyingGlass.svg";
+import IconAccount from "@/shared/icons/IconAccount.svg";
+import magnifyingGlass from "@/shared/icons/magnifyingGlass.svg";
 import { Navigation } from "./navigation";
 
 export const Header = () => {
@@ -26,7 +26,7 @@ export const Header = () => {
       <Flex gap={25}>
         <Link href="#" passHref>
           <Flex justify="center" align="center" direction="row" gap="xs" mt={9}>
-            <Image src={iconAccount} alt="logo" width={15} height={15} />
+            <Image src={IconAccount} alt="logo" width={15} height={15} />
             <Text>Войти</Text>
           </Flex>
         </Link>
