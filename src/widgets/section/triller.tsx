@@ -1,9 +1,9 @@
-import { Button } from "@/shared/ui/button/button";
-import Image from "next/image";
 import React from "react";
-import TrillerImage from "@/public/triller.png";
-import Play from "@/shared/icons/play.svg";
+import Image from "next/image";
 import { Flex, Text } from "@mantine/core";
+import { Button } from "@/shared/ui/Button";
+import TrillerImage from "@/public/SectionOfTriller/triller.png";
+import Play from "@/shared/icons/play.svg";
 
 export const Triller = () => {
   return (

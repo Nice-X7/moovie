@@ -1,5 +1,5 @@
 import React from "react";
-import Actor from "@/public/actor.png";
+import Actor from "@/public/AssetsOfPeople/actor.png";
 import Image, { StaticImageData } from "next/image";
 import { Box, Flex, Text } from "@mantine/core";
 
@@ -8,7 +8,7 @@ type actorsType = {
   roleName: string;
   role?: string;
   image: StaticImageData;
-}
+};
 
 const actors: actorsType[] = Array(10).fill({
   name: "Арден Таймер-Дженсин",
@@ -19,7 +19,7 @@ const actors: actorsType[] = Array(10).fill({
 
 export const ActorCard = () => {
   return (
-    <Flex gap="md" style={{ display: "flex", }}>
+    <Flex gap="md" style={{ display: "flex" }}>
       {actors.map((actor, index) => (
         <Box
           key={index}
@@ -42,10 +42,22 @@ export const ActorCard = () => {
             }}
           />
           <Box p={8} w={170}>
-            <Text size="sm" fw={700} mt="sm" c="dark" fz={20} style={{ wordBreak: "break-word" }}>
+            <Text
+              size="sm"
+              fw={700}
+              mt="sm"
+              c="dark"
+              fz={20}
+              style={{ wordBreak: "break-word" }}
+            >
               {actor.name}
             </Text>
-            <Text size="xs" mt='xs' c="dark" style={{ wordBreak: "break-word" }} >
+            <Text
+              size="xs"
+              mt="xs"
+              c="dark"
+              style={{ wordBreak: "break-word" }}
+            >
               {actor.roleName}
             </Text>
           </Box>

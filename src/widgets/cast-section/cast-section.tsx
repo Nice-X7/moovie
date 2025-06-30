@@ -4,11 +4,15 @@ import { CardGrid } from "@/shared/ui/CardGrid/CardGrid";
 import { Box, Flex, ScrollArea } from "@mantine/core";
 import { ActorCard } from "@/entities/Movie/ui/ActorCard";
 import { Catalog } from "@/shared/ui/DiscoveryCatalog/Catalog";
+
+import Vector from "@/public/Catalog/Vector.svg"
 import Rectangle_1 from "@/public/film-gallery-moments/Rectangle 60.png";
 import Rectangle_2 from "@/public/film-gallery-moments/Rectangle 56.png";
 import Rectangle_3 from "@/public/film-gallery-moments/Rectangle 57.png";
 import Rectangle_4 from "@/public/film-gallery-moments/Rectangle 58.png";
-import Vector from "@/public/Catalog/Vector.svg"
+import { Director } from "./Director/Director";
+import { SimilarFilms } from "./SimilarFilms/SimilarFilms";
+import { Recommendations } from "./Recommendations/Recommendations";
 
 const genres = ["", "", "", "", "", ""]
 const format = ["", "", "", "", "", ""]
@@ -40,21 +44,9 @@ export const CastSection = () => {
           <Image src={Rectangle_4} alt="" />
         </Flex>
       </Box>
-
-      <CardGrid
-        title="Режиссёр"
-        text="Режиссёром фильма «Носферату» (2024) является Роберт Эггерс, известный своим уникальным стилем, сочетающим историческую точность и напряжённую атмосферу. Его лучшие работы включают ужасы «Ведьма» (2015), психологический триллер «Маяк» (2019) и исторический эпик «Северянин» (2022)."
-      />
-
-      <CardGrid
-        title="Похожие фильмы"
-        text="SEO текст – По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст"
-      />
-
-      <Box>
-        <CardGrid title="Вам может понравиться" />
-      </Box>
-
+      <Director />
+      <SimilarFilms />
+      <Recommendations />
       <Box>
         <CardGrid title="Откройте для себя больше" />
         {/* <Catalog title='Жанры' icon={Vector} link="#"/> */}

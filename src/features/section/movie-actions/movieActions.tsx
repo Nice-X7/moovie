@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/shared/ui/button/button";
+import { Button } from "@/shared/ui/Button/button";
 import { MovieStats } from "@/features/section/movie-stats/MovieStats";
 import { Flex, Group, Text } from "@mantine/core";
 import Vector from "@/shared/icons/Vector.svg";

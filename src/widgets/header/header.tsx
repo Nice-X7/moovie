@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ActionIcon, Flex, Input, Text, Title, Tooltip } from "@mantine/core";
-import { IconLanguage } from "@tabler/icons-react";
-import IconAccount from "@/shared/icons/IconAccount.svg";
-import magnifyingGlass from "@/shared/icons/magnifyingGlass.svg";
 import { Navigation } from "./navigation";
+import { IconLanguage } from "@tabler/icons-react";
+import magnifyingGlass from "@/shared/icons/magnifyingGlass.svg";
+import IconAccount from "@/shared/icons/IconAccount.svg";
 
 export const Header = () => {
   return (

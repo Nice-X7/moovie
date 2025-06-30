@@ -6,7 +6,7 @@ import { Flex } from "@mantine/core";
 type ButtonProps = {
   text?: string;
   icon?: React.ReactNode;
-  bgColor: "#887A62" | "#303030";
+  bgColor: "#887A62" | "#303030" | "#B39C74";
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({

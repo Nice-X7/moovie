@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
-import Awards from "@/public/awards.png";
+import Awards from "@/public/SectionOfTriller/awards.png";
 import Write from "@/shared/icons/write.svg";
 import Share from "@/shared/icons/share.svg";
 import Link from "next/link";

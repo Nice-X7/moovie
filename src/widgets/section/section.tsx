@@ -1,11 +1,11 @@
 import React from "react";
-import { Flex } from "@mantine/core";
-import { Tabs } from "../../features/section/tabs";
 import Image from "next/image";
-import Poster from "@/public/poster.png";
+import { Flex } from "@mantine/core";
+import { Tabs } from "@/features/section/Tabs";
 import { Triller } from "./triller";
 import { MovieMeta } from "@/widgets/section/MovieMeta";
 import { MovieActions } from "@/features/section/movie-actions/movieActions";
+import Poster from "@/public/SectionOfTriller/poster.png";
 
 export const Section = () => {
   return (

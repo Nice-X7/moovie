@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/shared/ui/button/button";
+import { Button } from "@/shared/ui/Button";
 import { MovieCredits } from "@/features/section/Movie-Credits/MovieCredits";
 import { Flex, Text, Title } from "@mantine/core";
 
