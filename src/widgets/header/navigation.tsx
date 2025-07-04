@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GroupSvg from "@/shared/icons/group.svg";
-import { Flex, List, Menu } from "@mantine/core";
+import { Button, Flex, List, Menu } from "@mantine/core";
 
 interface HeaderLinkType {
   id: number;
@@ -19,10 +19,20 @@ const headerLinks: HeaderLinkType[] = [
 
 export const Navigation = () => {
   return (
-    <>
-      <List listStyleType="none">
+    <Flex gap="md" align="center">
+      <Button
+        color="#303030"
+        radius="xl"
+        px={0}
+        w={45}
+        h={45}
+        justify="center"
+      >
+        <Image src={GroupSvg} alt="Logo" width={22} height={22} />
+      </Button>
+
+      <List listStyleType="none" className="nav-list">
         <Flex align="center" gap="lg">
-          <Image src={GroupSvg} alt="Logo" width={20} height={20} />
           {headerLinks.map((item) => (
             <li key={item.id}>
               <Link href={item.href} passHref>
@@ -32,6 +42,6 @@ export const Navigation = () => {
           ))}
         </Flex>
       </List>
-    </>
+    </Flex>
   );
 };

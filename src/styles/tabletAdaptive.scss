@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+$tabletWidth: 1000px;
+$smallTabletWidth: 640px;
+
+.Logo {
+  font-size: 30px;
+
+  @media (max-width: $tabletWidth) {
+    font-size: 24px;
+  }
+}
+.header-group {
+  flex-wrap: wrap;
+  gap: 80px;
+  @media (max-width: 1100px) {
+    gap: 40px;
+  }
+  @media (max-width: 1000px) {
+    gap: 50px;
+  }
+  @media (max-width: 704px) {
+    gap: 14px;
+  }
+}
+
+.nav-list {
+  @media (max-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.search {
+  border-radius: 12px;
+  @media (max-width: $tabletWidth) {
+    border-radius: 20px;
+    width: 35vh;
+    order: 1;
+  }
+}
+
+.ui-group {
+  @media (max-width: 704px) {
+    gap: 14px;
+  }
+}
+
+.buttons-wrapper {
+  @media (max-width: $tabletWidth) {
+    order: 2;
+  }
+}

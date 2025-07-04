@@ -3,21 +3,16 @@ import Image from "next/image";
 import { CardGrid } from "@/shared/ui/CardGrid/CardGrid";
 import { Box, Flex, ScrollArea } from "@mantine/core";
 import { ActorCard } from "@/entities/Movie/ui/ActorCard";
-import { Catalog } from "@/shared/ui/DiscoveryCatalog/Catalog";
+import { Catalog } from "@/shared/DiscoveryCatalog/Catalog";
+import { Recommendations } from "./Recommendations/Recommendations";
+import { SimilarFilms } from "./SimilarFilms/SimilarFilms";
+import { Director } from "./Director/Director";
 
 import Vector from "@/public/Catalog/Vector.svg"
 import Rectangle_1 from "@/public/film-gallery-moments/Rectangle 60.png";
 import Rectangle_2 from "@/public/film-gallery-moments/Rectangle 56.png";
 import Rectangle_3 from "@/public/film-gallery-moments/Rectangle 57.png";
 import Rectangle_4 from "@/public/film-gallery-moments/Rectangle 58.png";
-import { Director } from "./Director/Director";
-import { SimilarFilms } from "./SimilarFilms/SimilarFilms";
-import { Recommendations } from "./Recommendations/Recommendations";
-
-const genres = ["", "", "", "", "", ""]
-const format = ["", "", "", "", "", ""]
-const years = ["", "", "", "", "", ""]
-const personalities = ["", "", "", "", "", ""]
 
 export const CastSection = () => {
   return (

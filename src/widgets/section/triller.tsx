@@ -13,6 +13,7 @@ export const Triller = () => {
         <div className="mb-[30px]">
           <Button
             bgColor="#303030"
+            h="30px"
             icon={<Image src={Play} alt="play" width={10} height={20} />}
           />
         </div>

@@ -5,7 +5,7 @@ import { Flex, Text } from "@mantine/core";
 
 export function App() {
   return (
-    <Flex direction="column">
+    <Flex direction="column" w="full">
       <header className="bg-black">
         <Header />
       </header>

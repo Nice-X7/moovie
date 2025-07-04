@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import '@mantine/core/styles.css';
 import '@/styles/globals.scss'
+import "@/styles/mobileAdaptive.scss"
+import "@/styles/tabletAdaptive.scss"
 
 export const metadata: Metadata = {
   title: "Create Next App",

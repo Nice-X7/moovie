@@ -9,17 +9,18 @@ import Poster from "@/public/SectionOfTriller/poster.png";
 
 export const Section = () => {
   return (
-    <Flex direction="column" align="center" gap="lg" pb={40}>
+    <>
       <Tabs />
-
-      <Flex gap="lg">
-        <Flex direction="column" align="center">
-          <Image alt="cover" src={Poster} className="w-260px h-360px" />
-          <Triller />
+      <Flex direction="column" align="center" gap="lg" pb={40}>
+        <Flex gap="lg">
+          <Flex direction="column" align="center">
+            <Image alt="cover" src={Poster} className="w-260px h-360px" />
+            <Triller />
+          </Flex>
+          <MovieMeta />
+          <MovieActions />
         </Flex>
-        <MovieMeta />
-        <MovieActions />
       </Flex>
-    </Flex>
+    </>
   );
 };

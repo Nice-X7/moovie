@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+$mobileWidth: 640px;
+$smallMobileWidth: 240px;
+
+.Logo {
+  font-size: 26px;
+
+  @media (max-width: $mobileWidth) {
+    font-size: 22px;
+    margin-right: 20px;
+  }
+}
+.nav-wrapper {
+    @media (max-width: $mobileWidth) {
+        order: 3;
+    }
+}
+
+.search-button {
+  display: none;
+  @media (max-width: $mobileWidth) {
+    display: block;
+  }
+}
+
+.search, .search-icon {
+  display: block;
+
+  @media (max-width: $mobileWidth) {
+    display: none;
+  }
+}
