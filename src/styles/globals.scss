@@ -1,4 +1,20 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind breakpoints
+----------------------------
+  sm    	640px   	  sm:
+  md	    768px	      md:
+  lg	    1024px    	lg:
+  xl    	1280px	    xl:
+  2xl	    1536px	    2xl: */
+
+// Планшеты	768px – 1023px	iPad, Android tablets	@media (max-width: 1023px) или min: 768px
+
+// Малые телефоны	320px – 480px	старые смартфоны, SE и т.п.	@media (max-width: 480px)
+// Обычные телефоны	481px – 767px	современные телефоны	@media (max-width: 767px)
 
 :root {
   --background: #ffffff;
@@ -32,21 +48,21 @@ body {
   font-weight: bold;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 4px;
     height: 2.25rem;
-    background-color: #6A4F40;
+    background-color: #6a4f40;
     border-radius: 9999px;
   }
 }
 .mantine-ScrollArea-thumb {
-  background: #E2D4BB !important;
+  background: #e2d4bb !important;
 }
 
 .mantine-ScrollArea-thumb:hover {
-  background: #D0C4A8 !important;
+  background: #d0c4a8 !important;
 }

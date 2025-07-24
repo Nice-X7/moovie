@@ -35,13 +35,14 @@ export const ActorCard = () => {
           <Image
             src={actor.image}
             alt={actor.name}
-            width={170}
+            height={130}
+            width={160}
             style={{
               borderRadius: "8px",
               objectFit: "cover",
             }}
           />
-          <Box p={8} w={170}>
+          <Box p={8} w={160}>
             <Text
               size="sm"
               fw={700}

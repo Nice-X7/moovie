@@ -31,7 +31,7 @@ export const Navigation = () => {
         <Image src={GroupSvg} alt="Logo" width={22} height={22} />
       </Button>
 
-      <List listStyleType="none" className="nav-list">
+      <List listStyleType="none" className="max-[1024px]:hidden">
         <Flex align="center" gap="lg">
           {headerLinks.map((item) => (
             <li key={item.id}>

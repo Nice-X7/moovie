@@ -10,41 +10,35 @@ import arrow from "@/public/Polygon 1.svg";
 export const Header = () => {
   return (
     <Flex
-      className="header-group"
-      justify="center"
-      align="center"
+      className="w-full justify-between items-center max-w-full"
       direction="row"
+      gap="lg"
       c="#fff"
-      p={"15px 0"}
     >
       <Title fw={400} c="#875959" className="Logo">
         Логотип
       </Title>
 
-      <div className="nav-wrapper">
-        <Navigation />
-      </div>
+        <div className="max-[640px]:order-3">
+          <Navigation />
+        </div>
+      <Flex align="center" gap="xs" className="max-[1024px]:flex-grow min-w-[30%] justify-between">
 
-      <Flex className="ui-group" align="center" gap="sm">
-        <Flex gap="md" align="center" className="buttons-wrapper">
+        <Flex gap="md" align="center" className="max-[640px]:order-2 max-[1024px]:order-3">
           <Link href="#" passHref>
-            <Flex
-              justify="row"
-              align="center"
-              direction="row"
-              w={70}
-              gap="xs"
-            >
+            <Flex justify="row" align="center" direction="row" gap="xs">
               <Image src={IconAccount} alt="logo" width={15} height={15} />
               <Text>Войти</Text>
             </Flex>
           </Link>
-          <Button h="30px" color="#303030" radius="xl">
-            RU{<Image src={arrow} alt="" />}
-          </Button>
+          <div className="hidden sm:inline">
+            <Button h="30px" color="#303030" radius="xl">
+              RU <Image src={arrow} alt="" className="ml-[5px]"/>
+            </Button>
+          </div>
         </Flex>
 
-        <div className="search-wrapper">
+        <div className="max-[640px]:order-1 max-[1024px]:order-2 flex-grow max-w-[600px]">
           <Search />
         </div>
       </Flex>

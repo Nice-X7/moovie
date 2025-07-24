@@ -1,52 +1,30 @@
 @import "tailwindcss";
 
-$tabletWidth: 1000px;
+$tabletWidth: 1024px;
 $smallTabletWidth: 640px;
 
 .Logo {
   font-size: 30px;
-
-  @media (max-width: $tabletWidth) {
+}
+@media only screen and (max-width: $tabletWidth) {
+  .Logo {
     font-size: 24px;
   }
-}
-.header-group {
-  flex-wrap: wrap;
-  gap: 80px;
-  @media (max-width: 1100px) {
-    gap: 40px;
+  .search {
+    border-radius: 20px;
   }
-  @media (max-width: 1000px) {
-    gap: 50px;
+  .nav-list {
+    display: none;
   }
-  @media (max-width: 704px) {
-    gap: 14px;
+  .desktop-raiting {
+    display: none;
   }
-}
-
-.nav-list {
-  @media (max-width: $tabletWidth) {
+  .tabs {
     display: none;
   }
 }
-
-.search {
-  border-radius: 12px;
-  @media (max-width: $tabletWidth) {
-    border-radius: 20px;
-    width: 35vh;
-    order: 1;
-  }
-}
-
-.ui-group {
-  @media (max-width: 704px) {
-    gap: 14px;
-  }
-}
-
-.buttons-wrapper {
-  @media (max-width: $tabletWidth) {
-    order: 2;
+@media only screen and (min-width: $tabletWidth) {
+  .tablet-raiting {
+    display: none;
   }
 }

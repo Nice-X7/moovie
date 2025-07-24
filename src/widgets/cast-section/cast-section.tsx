@@ -8,7 +8,7 @@ import { Recommendations } from "./Recommendations/Recommendations";
 import { SimilarFilms } from "./SimilarFilms/SimilarFilms";
 import { Director } from "./Director/Director";
 
-import Vector from "@/public/Catalog/Vector.svg"
+import Vector from "@/public/Catalog/Vector.svg";
 import Rectangle_1 from "@/public/film-gallery-moments/Rectangle 60.png";
 import Rectangle_2 from "@/public/film-gallery-moments/Rectangle 56.png";
 import Rectangle_3 from "@/public/film-gallery-moments/Rectangle 57.png";
@@ -22,7 +22,11 @@ export const CastSection = () => {
           title="В главных ролях"
           text="SEO текст – По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст"
         />
-        <ScrollArea scrollbarSize={10} w="48%" pb={20} className="scrollbar">
+        <ScrollArea
+          scrollbarSize={10}
+          pb={20}
+          className="scrollbar lg:max-w-[45%] min-w-0 md:flex-none w-full pr-[30px]"
+        >
           <ActorCard />
         </ScrollArea>
       </Box>

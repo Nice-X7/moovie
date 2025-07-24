@@ -1,10 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
-import Awards from "@/public/SectionOfTriller/awards.png";
-import Write from "@/shared/icons/write.svg";
-import Share from "@/shared/icons/share.svg";
-import Link from "next/link";
+import { Awards } from "@/entities/Movie/Raiting/awards";
 
 interface statsType {
   label: string;
@@ -28,7 +24,7 @@ const stats: statsType[] = [
 export const MovieStats = () => {
   return (
     <Flex direction="column" gap="md">
-      <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl" mt={10}>
+      <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl" w={330} mt={10}>
         {stats.map((item) => {
           if (item.label === "Бюджет" || item.label === "Сборы") {
             return (
@@ -66,28 +62,9 @@ export const MovieStats = () => {
           }
         })}
       </SimpleGrid>
-      <Image src={Awards} alt="awards" />
-
-      <Link href="#">
-        <Flex align="center" gap="xs">
-          <Image src={Write} alt="write a review" />
-          <Text td="underline" fw={700}>
-            Написать рецензию
-          </Text>
-        </Flex>
-      </Link>
-
-      <Link href="#">
-        <Flex align="center" gap="xs">
-          <Image src={Share} alt="" />
-          <Text td="underline" fw={700}>
-            Поделиться
-          </Text>
-        </Flex>
-      </Link>
-      <Link href="#">
-        <Text c="dimmed" fz="14">Нашли ошибку?</Text>
-      </Link>
+      <div className="sm:hidden">
+        <Awards />
+      </div>
     </Flex>
   );
 };

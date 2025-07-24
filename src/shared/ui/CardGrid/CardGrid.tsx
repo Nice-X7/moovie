@@ -23,7 +23,7 @@ export const CardGrid = ({
   imageWidth,
 }: cardGridType) => {
   return (
-    <Flex direction="column" c="#000" m="40 0 20 0" className="max-w-5/10">
+    <Flex direction="column" c="#000" m="40 0 20 0" className="lg:max-w-5/10">
       <Flex align="center">
         <Title order={1} className="titled-section">
           {title}
@@ -39,8 +39,8 @@ export const CardGrid = ({
             className="rounded-lg"
           />
         )}
-        <Group pl={20} align="center" >
-          <Text mt={30} >
+        <Group align="center" >
+          <Text mt={30} className="">
             {text}
           </Text>
           {showButton ? <Button bgColor="#B39C74" text={buttonText}/> : null}

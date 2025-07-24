@@ -2,7 +2,7 @@ import { Flex, List } from "@mantine/core";
 import Link from "next/link";
 import React from "react";
 
-const details: string[] = [
+const tabs: string[] = [
   "Актеры",
   "Рецензии",
   "Награды",
@@ -12,19 +12,16 @@ const details: string[] = [
   "Видео",
 ];
 
-export const Tabs = () => {
+export const MovieTabs = () => {
   return (
-    <Flex
-      className="hidden
-    sm:mr-[40px]
-    shrink-0
-    lg:mr-[35vh]"
-      justify="flex-end"
+    <Flex 
+      className="tabs justify-end"
       mt={10}
+      w="60%"
     >
       <List>
         <Flex>
-          {details.map((item, index, array) => (
+          {tabs.map((item, index, array) => (
             <li key={item}>
               <div className="flex items-center text-gray-400">
                 <Link href="#">{item}</Link>
