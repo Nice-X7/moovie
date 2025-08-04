@@ -26,4 +26,15 @@ $smallMobileWidth: 320px;
     width: 85px;
     font-size: 10px;
   }
+  .tabs {
+    display: none;
+  }
+}
+@media screen and (min-width: $mobileWidth) {
+  .actor_name {
+    font-size: 20px;
+  }
+  .role_name {
+    font-size: 14px;
+  }
 }

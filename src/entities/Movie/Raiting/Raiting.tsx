@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Flex, Group, Text } from "@mantine/core";
 import { Button } from "@/shared/ui/Button";
-import Favorite from "@/shared/icons/favorite.svg";
-import Vector from "@/shared/icons/Vector.svg";
+import Favorite from "@/public/icons/favorite.svg";
+import Vector from "@/public/icons/Vector.svg";
 
 export const Raiting = () => {
   return (

@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Flex, Text } from "@mantine/core";
 import Award from "@/public/SectionOfTriller/awards.png";
-import Write from "@/shared/icons/write.svg";
-import Share from "@/shared/icons/share.svg";
+import Write from "@/public/icons/write.svg";
+import Share from "@/public/icons/share.svg";
 
 export const Awards = () => {
   return (

@@ -15,9 +15,9 @@ const tabs: string[] = [
 export const MovieTabs = () => {
   return (
     <Flex 
-      className="tabs justify-end"
+      className="tabs justify-end max-[1024px]:ml-[40%] lg:ml-[20%]"
       mt={10}
-      w="60%"
+      w="50%"
     >
       <List>
         <Flex>

@@ -19,18 +19,17 @@ const actors: actorsType[] = Array(10).fill({
 
 export const ActorCard = () => {
   return (
-    <Flex gap="md" style={{ display: "flex" }}>
+    <Flex gap="lg" style={{ display: "flex" }}>
       {actors.map((actor, index) => (
         <Box
           key={index}
-          h={350}
           style={{
-            minWidth: 150,
             flexShrink: 0,
             overflow: "hidden",
             boxShadow: "2px 2px 8px rgba(0,0,0,0.1)",
           }}
-          className="border-2 border-[#EADEC9] rounded-lg overflow-hidden"
+          pb={20}
+          className="border-2 border-[#EADEC9] rounded-lg max-[640px]:w-[100px]"
         >
           <Image
             src={actor.image}
@@ -41,15 +40,16 @@ export const ActorCard = () => {
               borderRadius: "8px",
               objectFit: "cover",
             }}
+            className="max-[640px]:w-[100px] max-[640px]:h-[120px]"
           />
-          <Box p={8} w={160}>
+          <Box pl={8} className="inline-block max-w-[160px] sm:max-w-[120px]">
             <Text
               size="sm"
               fw={700}
               mt="sm"
               c="dark"
-              fz={20}
               style={{ wordBreak: "break-word" }}
+              className="actor_name"
             >
               {actor.name}
             </Text>
@@ -58,6 +58,7 @@ export const ActorCard = () => {
               mt="xs"
               c="dark"
               style={{ wordBreak: "break-word" }}
+              className="role_name"
             >
               {actor.roleName}
             </Text>

@@ -12,7 +12,7 @@ export function App() {
       <section className="bg-[color:#151515] pb-[30px]">
         <MoviePage />
       </section>
-      <section className="bg-[color:#FBF9F7] lg:pl-[15%] sm:pl-[3%]">
+      <section className="bg-[color:#FBF9F7] pl-[10%] max-[1024px]:px-[5%] max-[640px]:pl-[3%]">
         <CastSection />
       </section>
       <footer className="bg-black p-30">

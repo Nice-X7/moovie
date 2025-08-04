@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button, Flex, Text } from "@mantine/core";
 import TrillerImage from "@/public/SectionOfTriller/triller.png";
-import Play from "@/shared/icons/play.svg";
+import Play from "@/public/icons/play.svg";
 import Poster from "@/public/SectionOfTriller/poster.png";
 import { Awards } from "@/entities/Movie/Raiting/awards";
 

@@ -1,28 +1,113 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { Box, Group, List, ListItem, SimpleGrid, Text } from "@mantine/core";
+import Image from "next/image";
+import {
+  Box,
+  Group,
+  List,
+  ListItem,
+  SimpleGrid,
+  Text,
+  Title,
+} from "@mantine/core";
+import { genres, personalities, years, format } from "./data";
 
-type catalogProps = {
-  icon: StaticImageData;
-  title: string;
-  link: string;
-  items: string[];
-};
+import MovieClapper from "@/public/Catalog/Movie_Clapper.svg";
+import Calendar from "@/public/Catalog/Calendar.svg";
+import Man from "@/public/Catalog/man.svg";
+import Vector from "@/public/Catalog/Vector.svg";
 
-export const Catalog = ({ icon, items, title, link }: catalogProps) => {
+export const Catalog = () => {
   return (
-    <SimpleGrid cols={4} c="dark">
+    <SimpleGrid
+      className="lg:max-w-[60%] sm:max-w-[100%]"
+      pb={20}
+      cols={{ base: 2, sm: 4 }}
+      c="dark"
+    >
       <Box>
-        <Group>
-          <Image src={icon} alt="" />
-          <Text>{title}</Text>
+        <Group gap="xs" align="center">
+          <Image src={Vector} alt=""></Image>
+          <Title order={4} pt={5}>
+            Жанры
+          </Title>
         </Group>
         <List>
-          {items.map((item, index) => {
+          {genres.map((item, index) => {
             return (
-              <ListItem key={index}>
-                <Link href={link}>{item}</Link>
+              <ListItem key={index} pt={10} className="">
+                <Link
+                  className="linkUnderline"
+                  href=""
+                >
+                  {item}
+                </Link>
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
+      <Box>
+        <Group gap="xs" align="center">
+          <Image src={MovieClapper} alt=""></Image>
+          <Title order={4} pt={5}>
+            Формат
+          </Title>
+        </Group>
+        <List>
+          {format.map((item, index) => {
+            return (
+              <ListItem key={index} pt={10}>
+                <Link
+                  className="linkUnderline"
+                  href=""
+                >
+                  {item}
+                </Link>
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
+      <Box>
+        <Group gap="xs" align="center">
+          <Image src={Calendar} alt=""></Image>
+          <Title order={4} pt={5}>
+            Год выпуска
+          </Title>
+        </Group>
+        <List>
+          {years.map((item, index) => {
+            return (
+              <ListItem key={index} pt={10}>
+                <Link
+                  className="linkUnderline"
+                  href=""
+                >
+                  {item}
+                </Link>
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
+      <Box>
+        <Group gap="xs" align="center">
+          <Image src={Man} alt=""></Image>
+          <Title order={4} pt={5}>
+            Персоналии
+          </Title>
+        </Group>
+        <List>
+          {personalities.map((item, index) => {
+            return (
+              <ListItem key={index} pt={10}>
+                <Link
+                  className="linkUnderline"
+                  href=""
+                >
+                  {item}
+                </Link>
               </ListItem>
             );
           })}

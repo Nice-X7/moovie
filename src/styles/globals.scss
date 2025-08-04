@@ -66,3 +66,61 @@ body {
 .mantine-ScrollArea-thumb:hover {
   background: #d0c4a8 !important;
 }
+
+.linkUnderline {
+  --link-color:        #000;
+  --link-hover:        #eab308;
+  --underline-height:  2px;
+  --underline-offset:  0px;
+  --underline-duration: .25s;
+
+  position: relative;
+  display: inline-block;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--underline-duration) ease;
+  padding-bottom: 1px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: var(--underline-offset);
+    width: 100%;
+    height: var(--underline-height);
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--underline-duration) ease;
+    will-change: transform;
+  }
+
+  /* Десктопы/мыши: hover / focus-visible */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus-visible {
+      color: var(--link-hover);
+      &::after { transform: scaleX(1); }
+    }
+  }
+
+  /* Сенсорные: показываем только во ВРЕМЯ тапа (:active).
+     Фокус НЕ используем, чтобы эффект не залипал. */
+  @media (hover: none), (pointer: coarse) {
+    &:active {
+      color: var(--link-hover);
+      &::after { transform: scaleX(1); }
+    }
+    &:focus {
+      /* сбрасываем фокусный эффект на тач-устройствах */
+      color: var(--link-color);
+    }
+  }
+}
+
+/* Уважение «уменьшить анимации» */
+@media (prefers-reduced-motion: reduce) {
+  .linkUnderline, .linkUnderline::after { transition: none !important; }
+}

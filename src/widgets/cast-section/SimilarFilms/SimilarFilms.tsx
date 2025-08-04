@@ -11,7 +11,7 @@ export const SimilarFilms = () => {
         title="Похожие фильмы"
         text="SEO текст – По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст"
       />
-      <Flex gap="lg">
+      <Flex gap="lg" className="max-[640px]:flex-wrap">
         {movieCards.map((item, index) => {
           return (
             <MovieCard

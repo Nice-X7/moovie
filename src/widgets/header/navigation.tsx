@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GroupSvg from "@/shared/icons/group.svg";
+import GroupSvg from "@/public/icons/group.svg";
 import { Button, Flex, List, Menu } from "@mantine/core";
 
 interface HeaderLinkType {

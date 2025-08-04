@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button, Flex, Text, Title } from "@mantine/core";
 import { Navigation } from "./navigation";
 import { Search } from "@/features/header/search";
-import IconAccount from "@/shared/icons/IconAccount.svg";
+import IconAccount from "@/public/icons/IconAccount.svg";
 import arrow from "@/public/Polygon 1.svg";
 
 export const Header = () => {

@@ -9,7 +9,7 @@ export const Recommendations = () => {
   return (
     <>
       <CardGrid title="Вам может понравиться" />
-      <Flex gap="lg">
+      <Flex gap="lg" className="max-[640px]:flex-wrap">
         {movieCards.map((item, index) => {
           return (
             <MovieCard
