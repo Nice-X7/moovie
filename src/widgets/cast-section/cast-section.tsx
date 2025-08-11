@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { Box, Flex, ScrollArea, Text, Button } from "@mantine/core";
+import { Box, ScrollArea } from "@mantine/core";
 import { CardGrid } from "@/shared/ui/CardGrid/CardGrid";
 import { ActorCard } from "@/entities/Movie/ui/ActorCard";
 import { Catalog } from "@/shared/DiscoveryCatalog/Catalog";
@@ -9,7 +8,7 @@ import { SimilarFilms } from "./SimilarFilms/SimilarFilms";
 import { Director } from "./Director/Director";
 import { Media } from "./media/media";
 
-export const CastSection = () => (
+export const CastSection: React.FC = () => (
   <>
     <Box>
       <CardGrid

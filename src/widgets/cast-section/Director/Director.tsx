@@ -1,26 +1,32 @@
 import React from "react";
-import { movieCards } from "./data";
+import { Flex, Loader } from "@mantine/core";
 import { CardGrid } from "@/shared/ui/CardGrid/CardGrid";
 import { MovieCard } from "@/entities/Movie/ui/MovieCard";
-import { Flex } from "@mantine/core";
-import image from "@/public/AssetsOfPeople/image.png";
+import { useDirectorFilms } from "@/shared/api/hooks/useMovieImages";
 
 export const Director = () => {
+  const { data, isLoading, error } = useDirectorFilms();
+
+  if (isLoading) return <Loader color="blue" />;
+  if (error) return <div>Error</div>;
+
   return (
     <>
       <CardGrid
         title="Режиссёр"
         showButton={true}
         buttonText="Все работы режиссера"
-        avatar={image}
-        text="Режиссёром фильма «Носферату» (2024) является Роберт Эггерс, известный своим уникальным стилем, сочетающим историческую точность и напряжённую атмосферу. Его лучшие работы включают ужасы «Ведьма» (2015), психологический триллер «Маяк» (2019) и исторический эпик «Северянин» (2022)."
+        avatar={data?.aboutDirector.image}
+        text={data?.aboutDirector.text}
       />
-      <Flex gap="lg" className="md:mt-[40px] max-[640px]:flex-wrap">
-        {movieCards.map((item, index) => {
+      <Flex gap="lg" className="md:mt-[40px] max-[640px]:flex-wrap lg:w-[55%]">
+        {data?.directorWorks.map((item, index) => {
           return (
             <MovieCard
+              width="80%"
+              height="90%"
               key={index}
-              filmCover={item.icon}
+              image={item.image}
               name={item.name}
               year={item.year}
               genre={item.genre}

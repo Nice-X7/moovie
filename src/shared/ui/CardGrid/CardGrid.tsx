@@ -1,16 +1,13 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import { Flex, Group, Text, Title } from "@mantine/core";
-import { Button } from "../Button";
+import { StaticImageData } from "next/image";
+import { Button, Flex, Group, Image, Text, Title } from "@mantine/core";
 
 interface cardGridType {
-  avatar?: StaticImageData;
+  avatar?: string | StaticImageData;
   title: string;
   text?: string;
   buttonText?: string;
   showButton?: boolean;
-  imageWidth?: number;
-  imageHeight?: number;
 }
 
 export const CardGrid = ({
@@ -19,8 +16,6 @@ export const CardGrid = ({
   avatar,
   buttonText,
   showButton = false,
-  imageHeight,
-  imageWidth,
 }: cardGridType) => {
   return (
     <Flex direction="column" c="#000" m="70 0 20 0" className="lg:max-w-5/10">
@@ -34,14 +29,16 @@ export const CardGrid = ({
           <Image
             src={avatar}
             alt={title}
-            width={imageWidth}
-            height={imageHeight}
             className="rounded-lg mt-[30px]"
           />
         )}
         <Group align="center">
           <Text mt={20}>{text}</Text>
-          {showButton ? <Button bgColor="#B39C74" text={buttonText} /> : null}
+          {showButton ? (
+            <Button radius="lg" color="#B39C74">
+              {buttonText}
+            </Button>
+          ) : null}
         </Group>
       </Flex>
     </Flex>

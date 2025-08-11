@@ -7,15 +7,14 @@ import {
   List,
   ListItem,
   SimpleGrid,
-  Text,
   Title,
 } from "@mantine/core";
 import { genres, personalities, years, format } from "./data";
 
-import MovieClapper from "@/public/Catalog/Movie_Clapper.svg";
-import Calendar from "@/public/Catalog/Calendar.svg";
-import Man from "@/public/Catalog/man.svg";
-import Vector from "@/public/Catalog/Vector.svg";
+import MovieClapper from "#/public/Catalog/Movie_Clapper.svg";
+import Calendar from "#/public/Catalog/Calendar.svg";
+import Man from "#/public/Catalog/man.svg";
+import Vector from "#/public/Catalog/Vector.svg";
 
 export const Catalog = () => {
   return (

@@ -1,10 +1,5 @@
-import { App } from "@/views/_app";
-import { MantineProvider } from "@mantine/core";
+import ClientRoot from "./components/clientRoot";
 
 export default function Home() {
-  return (
-    <MantineProvider>
-      <App />
-    </MantineProvider>
-  );
+  return <ClientRoot />;
 }

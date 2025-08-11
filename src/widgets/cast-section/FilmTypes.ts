@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export type movieCardsType = {
-  icon: StaticImageData;
+  image: string;
   name: string;
   year: number;
   genre: string;

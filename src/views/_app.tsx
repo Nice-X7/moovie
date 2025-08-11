@@ -3,7 +3,7 @@ import { Header } from "@/widgets/header/header";
 import { MoviePage } from "@/widgets/section/MoviePage";
 import { Flex, Text } from "@mantine/core";
 
-export function App() {
+export const App: React.FC = () => {
   return (
     <Flex direction="column" w="full" className="">
       <header className="bg-black px-4 sm:px-3 lg:px-20 py-4">
