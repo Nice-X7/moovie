@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, NumberFormatter, Text, SimpleGrid, Loader } from "@mantine/core";
+import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
 import { Awards } from "@/entities/Movie/Raiting/awards";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
