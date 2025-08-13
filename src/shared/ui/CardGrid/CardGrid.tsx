@@ -29,7 +29,7 @@ export const CardGrid = ({
           <Image
             src={avatar}
             alt={title}
-            className="rounded-lg mt-[30px]"
+            className="rounded-lg mt-[30px] avatar"
           />
         )}
         <Group align="center">

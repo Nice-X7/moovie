@@ -1,26 +1,7 @@
 import React from "react";
 import { Flex, NumberFormatter, Text, SimpleGrid } from "@mantine/core";
 import { Awards } from "@/entities/Movie/Raiting/awards";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
-
-type statsType = {
-  label: string;
-  value: string | number;
-  id: number;
-}
-
-const fetchMovieStats = async (): Promise<statsType[]> => {
-  const { data } = await axios.get("/api/movieActions");
-  return data;
-};
-
-export const useMovieStats = () => {
-  return useQuery({
-    queryKey: ["movieActions"],
-    queryFn: fetchMovieStats,
-  });
-};
+import { useMovieStats } from "@/shared/api/hooks/useMovieImages";
 
 export const MovieStats = () => {
   const { data, isLoading, isError } = useMovieStats();

@@ -1,26 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-
-interface MovieCards {
-  image: string;
-  name: string;
-  year: number;
-  genre: string;
-}
-interface directorWorksType {
-  image: string;
-  name: string;
-  year: number;
-  genre: string;
-}
-interface aboutDirectorType {
-  image: string
-  text: string
-}
-interface actorType {
-  directorWorks: directorWorksType[]
-  aboutDirector: aboutDirectorType
-}
+import { actorType, MovieCards, statsType } from "./hookTypes";
 
 const fetchMovieTriller = async () => {
   const { data } = await axios.get("/api/trillerInfo");
@@ -91,5 +71,17 @@ export const useActor = () => {
   return useQuery({
     queryKey: ["actor"],
     queryFn: fetchActor,
+  });
+};
+
+const fetchMovieStats = async (): Promise<statsType[]> => {
+  const { data } = await axios.get("/api/movieActions");
+  return data;
+};
+
+export const useMovieStats = () => {
+  return useQuery({
+    queryKey: ["movieActions"],
+    queryFn: fetchMovieStats,
   });
 };

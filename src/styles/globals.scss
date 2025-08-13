@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Tailwind breakpoints
 ----------------------------
@@ -19,13 +16,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,7 +87,6 @@ body {
     will-change: transform;
   }
 
-  /* Десктопы/мыши: hover / focus-visible */
   @media (hover: hover) and (pointer: fine) {
     &:hover,
     &:focus-visible {
@@ -106,21 +95,17 @@ body {
     }
   }
 
-  /* Сенсорные: показываем только во ВРЕМЯ тапа (:active).
-     Фокус НЕ используем, чтобы эффект не залипал. */
   @media (hover: none), (pointer: coarse) {
     &:active {
       color: var(--link-hover);
       &::after { transform: scaleX(1); }
     }
     &:focus {
-      /* сбрасываем фокусный эффект на тач-устройствах */
       color: var(--link-color);
     }
   }
 }
 
-/* Уважение «уменьшить анимации» */
 @media (prefers-reduced-motion: reduce) {
   .linkUnderline, .linkUnderline::after { transition: none !important; }
 }

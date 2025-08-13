@@ -29,6 +29,9 @@ $smallMobileWidth: 320px;
   .tabs {
     display: none;
   }
+  .avatar {
+    width: 40%
+  }
 }
 @media screen and (min-width: $mobileWidth) {
   .actor_name {
